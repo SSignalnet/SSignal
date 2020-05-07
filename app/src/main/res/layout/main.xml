@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/标签"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/文字_讯友录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="讯友录"
+            android:textAlignment="center"
+            android:textColor="#F44336"
+            android:textColorLink="@android:color/black" />
+
+        <TextView
+            android:id="@+id/文字_聊天"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="聊天"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/文字_小宇宙"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="小宇宙"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/左右滑动页容器"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/标签"
+        android:layout_above="@id/文字_自启动提醒" >
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <TextView
+        android:id="@+id/文字_自启动提醒"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#03A9F4"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="自启动提醒"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:visibility="gone" />
+
+</RelativeLayout>

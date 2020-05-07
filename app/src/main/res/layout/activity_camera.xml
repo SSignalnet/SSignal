@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <net.ssignal.camera.AutoFitTextureView
+        android:id="@+id/媒体呈现区"
+        android:layout_width="match_parent"
+        android:layout_height="631dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="261dp"
+        android:layout_below="@id/媒体呈现区"
+        android:layout_alignParentBottom="true"
+        android:background="#000000">
+
+        <Button
+            android:id="@+id/按钮_开始"
+            android:layout_width="137dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20px"
+            android:background="@drawable/button_white"
+            android:text="开始"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/按钮_取消"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:background="@drawable/button_white"
+            android:text="取消"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/按钮_开始"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/按钮_发送"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/button_white"
+            android:text="发送"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/按钮_开始"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/文字_剩余秒数"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="#FF0000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/文字_前后摄像头"
+            android:layout_width="60dp"
+            android:layout_height="17dp"
+            android:text="后置摄像头"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

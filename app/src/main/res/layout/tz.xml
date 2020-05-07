@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/图片框"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/文字_标题"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/图片框"
+        android:text="下载“SSingal Demo”新版本安装包"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/文字_进度"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="0%"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/进度条"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/图片框"
+        android:layout_below="@+id/图片框"
+        android:layout_marginTop="10dp"
+        android:max="100" />
+
+
+</RelativeLayout>
